@@ -70,5 +70,40 @@ function listElement (arrPrimitives) {
 }
 listElement([1, 'tea',false]);
 
-//
+//– створити функцію, яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ. 
+// Для кожного об’єкту окремий блок.
+function arrusers(users) {
+    for (const user of users) {
+        document.write(`<div>${user.id} ${user.name} ${user.age}</div>`)
+    }
+}
+arrusers([
+    {id:1, name: 'Orest', age:45},
+    {id:2, name: 'Ira', age:40},
+    {id:3, name: 'Dmutro', age:25},
+    {id:4, name: 'Oleg', age:33}
+])
+//– створити функцію яка повертає найменьше число з масиву
+function minNumbers(numbers) {
+    let min = numbers[0]
+    for (let i=1; i<numbers.length; i++) {
+        let number = numbers[i];
+        if (number < min) {
+            min = number
+        }
+    }
+    return min;
+}
+console.log(minNumbers([22, 56, -15, 10, 59, 65]))
+
+//– створити функцію sum(arr), яка приймає масив чисел, сумує значення елементів масиву та повертає його.
+// Приклад sum([1,2,10])
+function sum (arr) {
+    let busket = 0;
+    for (const item of arr) {
+        busket = busket + item;
+    }
+    return busket;
+}
+console.log(sum([1, 2, 10]))
 
