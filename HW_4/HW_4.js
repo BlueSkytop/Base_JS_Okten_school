@@ -1,5 +1,5 @@
 //– створити функцію, яка обчислює та повертає площу прямокутника зі сторонами  а і б
-function squuared(a, b) {
+function squared(a, b) {
     const result = a*b;
     console.log(result)
     return result
@@ -72,12 +72,12 @@ listElement([1, 'tea',false]);
 
 //– створити функцію, яка приймає масив об’єктів з наступними полями id,name,age , та виводить їх в документ. 
 // Для кожного об’єкту окремий блок.
-function arrusers(users) {
+function arrUsers(users) {
     for (const user of users) {
         document.write(`<div>${user.id} ${user.name} ${user.age}</div>`)
     }
 }
-arrusers([
+arrUsers([
     {id:1, name: 'Orest', age:45},
     {id:2, name: 'Ira', age:40},
     {id:3, name: 'Dmutro', age:25},
@@ -107,3 +107,14 @@ function sum (arr) {
 }
 console.log(sum([1, 2, 10]))
 
+//– створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
+function swap(arr,index1,index2) {
+    if (index1 < arr.length && index2 < arr.length) {
+        let number = arr[index1];
+        arr[index1]= arr[index2];
+        arr[index2] = number;
+        return arr;
+    }
+    return -Infinity;
+}
+console.log(swap([11, 22, 33, 44], 1, 3));
